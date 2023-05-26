@@ -26,9 +26,10 @@ public class CollisionsHandler : MonoBehaviour
 
     void Update() 
     {
-        CheatKeys();
+        //CheatKeys();
     }
 
+/*
     void CheatKeys()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -41,6 +42,7 @@ public class CollisionsHandler : MonoBehaviour
             isNoCollisionCheat = !isNoCollisionCheat;
         }
     }
+*/
 
     void OnCollisionEnter(Collision other)
     {
