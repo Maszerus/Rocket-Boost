@@ -22,13 +22,13 @@ public class Oscilator : MonoBehaviour
 
     void ObstacleMovement()
     {
-        if (period <= Mathf.Epsilon) {return;}      //Mathf.Epsilon - smallest possible number in float grater that 0, better than comparing to zero!!!
-        float cycle = Time.time / period;           //constantly growing over tome
+        if (period <= Mathf.Epsilon) {return;} 
+        float cycle = Time.time / period;
 
-        const float tau = Mathf.PI * 2;             //constant value of 6,283
-        float rawSinWave = Mathf.Sin(cycle * tau);  //going from -1 to 1 - check sin in wiki or something if not remember
+        const float tau = Mathf.PI * 2; 
+        float rawSinWave = Mathf.Sin(cycle * tau); 
 
-        movementVector = (rawSinWave + 1f) / 2f;    //recalculating to go from 0 to 1 so its cleaner
+        movementVector = (rawSinWave + 1f) / 2f; 
 
         Vector3 offset = movementVector * moveToPosition;
         transform.position = startingPosition + offset;
